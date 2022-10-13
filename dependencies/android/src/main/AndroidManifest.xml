@@ -1,2 +1,19 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<manifest xmlns:android='http://schemas.android.com/apk/res/android' package='android.haxe.androidtools' />
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="auto" android:versionCode="1" android:versionName="0.2.7" package="com.badguy.badguymod" platformBuildVersionCode="28" platformBuildVersionName="9">
+	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28" />
+	<uses-feature android:glEsVersion="0x20000" android:required="true" />
+	<uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+	<application android:allowBackup="true" android:debuggable="true" android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="Friday Night Funkin': Psych Engine" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+		<meta-data android:name="SDL_ENV.SDL_IOS_ORIENTATIONS" android:value="LandscapeLeft LandscapeRight" />
+		<activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:label="Friday Night Funkin': Psych Engine" android:launchMode="singleTask" android:name="com.badguy.badguymod.MainActivity" android:screenOrientation="sensorLandscape">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+				<category android:name="tv.ouya.intent.category.GAME" />
+			</intent-filter>
+		</activity>
+	</application>
+</manifest>
